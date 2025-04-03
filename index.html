@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <script src="https://kit.font-awesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png"  class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <img src="images/cross.png" width="20px" height="20px" onclick="closemenu()" class="bars" id="bars">
+            </ul>
+            <img src="images/baars.png" width="30px" height="30px" onclick="openmenu()" class="bars">
+        </nav>
+        <div class="header-text">
+            <!-- <p>UI/UX Designer</p> -->
+             <h1>Hello, I'm <span>Ajay</span></h1>
+            <div class="featured-name">
+                <span class="typedtext"></span>
+            </div>
+            <p> “I am a technology enthusiant pursuing a B.Tech in Artificial intelligence and machine learning.<br>
+                With a strong foundation in programming and data analytics,<br>
+                I have successfully completed projects focused on data analysis and web development.<br>
+                I am eager to apply my skills in a challenging position to contribute to organizational <br>
+                success and to further develop my expertise in the field.”</p>
+            <!-- <div class="text-info">
+                <p>hi how are you</p>
+            </div> -->
+            <a href="images/ajay-resume.pdf" download class="btn btn2">Download CV<i class="uil uil-file"></i></a>
+            
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me<hr></h1>
+                <p>I'm a dedicated data analyst with a strong knowledge on collecting, analyzing, 
+                    and interpreting complex datasets to drive business insights. Proficient in SQL, Python, Excel, 
+                    and data visualization tools like Tableau and Power BI. Adept at building dashboards, 
+                    automating reports, and optimizing data workflows to support decision-making. Strong problem-solving skills
+                     with a keen eye for identifying trends and improving operational efficiency to translate data into actionable 
+                     strategies.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <!-- <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>programming</span><br><span class="spn" id="spn1">python, Sql</span></li>
+                        <li><span>data analytics & data cleaning</span><br><span class="spn" id="spn1">excel, microsoft sql server</span></li>
+                        <li><span>data visualization </span><br><span class="spn" id="spn1">excel, power BI</span></li>
+                        <li><span>frontend web technologies</span><br><span class="spn" id="spn1">html, css, javascript</span></li>
+                        <li><span>version control</span><br><span class="spn" id="spn1">Git, GitHub</span></li>
+                    </ul>
+                </div>
+                <!-- <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
+                        <li><span>2019 - 2021</span><br>Team lead at StarApp LLC.</li>
+                        <li><span>2017 - 2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                        <li><span>2016 - 2017</span><br>Internship at ekart eCommerce.</li>
+                    </ul>
+                </div> -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-2024</span><br><span class="spn" id="spn1">bachelor of technology</span><br>Pace institute of technology and sciences,ongole.<br><span class="spn">cgpa : 7.5</span></li>
+                        <li><span>2018-2020</span><br><span class="spn" id="spn1">intermediate</span><br>sri saraswathi junior college,ongole.<br><span class="spn">marks : 927 <br>cgpa : 9.71</span></li>
+                        <li><span>2014</span><br><span class="spn" id="spn1">10<sup>th</sup>  class</span><br>z.p.high school,pakala.<br><span class="spn">cgpa : 9.3</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services<hr></h1>
+        <div class="services-list">
+            <div>
+                <!-- <i class="fa-solid fa-server"></i> -->
+                <h2>Data Collection and Preparation</h2>
+                <p>
+                <ul>
+                    <li>Gathering data from various sources (databases, excel, csv files etc.)</li>
+                    <li>Cleaning and transforming data to ensure accuracy and consistency</li>
+                    <li>Dealing with missing values, correcting errors, and removing inconsistencies</li>
+                </ul>
+                </p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <!-- <i class="fa-thin fa-server"></i> -->
+                <h2>Data Analysis and Interpretation</h2>
+                <p>
+                <ul>
+                    <li>Using statistical tools and techniques to identify patterns, trends, and anomalies</li>
+                    <li>Performing descriptive, diagnostic, predictive, and prescriptive analytics</li>
+                    <li>Building and maintaining data models</li>
+                </ul>
+                </p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <!-- <i class="fa-thin fa-server"></i> -->
+                <h2>Data Visualization and Reporting</h2>
+                <p>
+                <ul>
+                    <li>Creating clear and concise visualizations (charts, graphs etc.) to communicate findings effectively</li>
+                    <li>Generating reports and dashboards to track key performance indicators (KPIs)</li>
+                    <li>Building interactive dashboards</li>
+                </ul>
+                </p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            
+
+
+            <div>
+                <!-- <i class="fa-thin fa-server"></i> -->
+                <h2>Business Analysis and Reporting</h2>
+                <p>
+                <ul>
+                    <li>Communicates with the client for requirements gathering</li>
+                    <!-- <li>Translates these business requirements into technical requirements</li> -->
+                    <li>Analyzing customer feedback to identify areas of improvement</li>
+                    <li>Tracking key performance indicators (KPIs) to measure business success</li>
+                    <li>Creating reports that visualize data trends for stakeholders</li>
+                </ul>
+                </p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <!-- <i class="fa-thin fa-server"></i> -->
+                <h2>frontend Webdeveloper</h2>
+                <p>
+                <ul>
+                    <li>Creating the client side websites and web applications</li>
+                    <li>Creating the User Interfaces for the visual 
+                        elements and layout of a website or application, including the structure, content, and styling</li>
+                    <li>JavaScript used to add interactivity and dynamic features to websites</li>
+                    
+                </ul>
+                </p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects<hr></h1>
+
+    <div class="button-wrap">
+        <i class="fa-solid fa-arrow-right" id="backBtn"></i>
+        <div class="main-work-lists"> 
+
+
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Pizza sales report<hr></h3>
+                        <p> A pizza restaurant noticed fluctuations in its sales and wanted to analyze the performance of different pizza types, peak sales times, and customer preferences. 
+                            The management aimed to identify trends and improve sales strategies to boost revenue and customer satisfaction.</p>
+                        <!-- <a href="#"><img src="images/explore.png" width="50px" height="50px"></a> -->
+                         <button class="btn"><a href="https://github.com/Ajay-110125/PIZZA-SALES-REPORT">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.jpg">
+                    <div class="layer">
+                        <h3>Electronics store sales report<hr></h3>
+                        <p>In this electronics & furniture store will face the some flcutations. 
+                        And analyse the data and perform some tasks.These tasks are helpful to improve their business.
+                        The management aimed to identify trends and improve sales strategies to boost their revenue.</p>
+                        <!-- <a href="#"><img src="images/explore.png" width="50px" height="50px"></a> -->
+                        <button class="btn"><a href="https://github.com/Ajay-110125/ELECTRONICS-FURNITURE-STORE-SALES-REPORT">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Sports website<hr></h3>
+                        <p>This is the basic and simple sports website.
+                        In this sports website we provided the detailed information on teams, players.
+                        Provides latest sports news, match updates, player statistics, and event schedules.</p>
+                        <!-- <a href="#"><img src="images/explore.png" width="50px" height="50px"></a> -->
+                        <!-- <button class="btn">view project on <a href="#"><i class="uil uil-github-alt"></i></a>
+                            <a href="#" ><i class="uil uil-github-alt" id="icons"></i></a></button> -->
+                        <button class="btn"><a href="https://github.com/Ajay-110125/SPORTS-WEBSITE">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div> 
+            </div>    
+            
+    
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/calculator.png">
+                    <div class="layer">
+                        <h3>Digital Calculator<hr></h3>
+                        <p>This is Digital Calculator this calculator is used for calculating the basic mathematical operations.</p>
+                        <button class="btn"><a href="https://github.com/Ajay-110125/DIGITAL-CALCULATOR">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div> 
+                <!-- <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Sports website<hr></h3>
+                        <p>This is the basic and simple sports website.
+                           In this sports website we provided the detailed information on teams, players.
+                           Provides latest sports news, match updates, player statistics, and event schedules.</p>
+                        <button class="btn"><a href="https://github.com/Ajay-110125/SPORTS-WEBSITE">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Sports website<hr></h3>
+                        <p>This is the basic and simple sports website.
+                           In this sports website we provided the detailed information on teams, players.
+                           Provides latest sports news, match updates, player statistics, and event schedules.</p>
+                        <button class="btn"><a href="https://github.com/Ajay-110125/SPORTS-WEBSITE">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div>     -->
+            </div>
+
+
+            <!-- <div class="work-list">
+                <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Sports website<hr></h3>
+                        <p>This is the basic and simple sports website.
+                           In this sports website we provided the detailed information on teams, players.
+                           Provides latest sports news, match updates, player statistics, and event schedules.</p>
+                        <button class="btn"><a href="https://github.com/Ajay-110125/SPORTS-WEBSITE">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div> 
+                <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Sports website<hr></h3>
+                        <p>This is the basic and simple sports website.
+                           In this sports website we provided the detailed information on teams, players.
+                           Provides latest sports news, match updates, player statistics, and event schedules.</p>
+                        <button class="btn"><a href="https://github.com/Ajay-110125/SPORTS-WEBSITE">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Sports website<hr></h3>
+                        <p>This is the basic and simple sports website.
+                           In this sports website we provided the detailed information on teams, players.
+                           Provides latest sports news, match updates, player statistics, and event schedules.</p>
+                        <button class="btn"><a href="https://github.com/Ajay-110125/SPORTS-WEBSITE">view project on <i class="uil uil-github-alt"></i></a></button>
+                    </div>
+                </div>    
+            </div> -->
+
+
+        </div> 
+        <i class="fa-solid fa-arrow-left" id="nextBtn"></i>
+    </div>   
+    
+
+
+        <a href="https://github.com/Ajay-110125?tab=repositories" class="btn">See more<i class="fa-duotone fa-solid fa-eye"></i></a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me<hr></h1>
+                <p>Feel free to reach out to me through any of the following platforms. Whether you have questions, collaboration ideas, or just want to connect, I'm always open to new opportunities.</p>
+               <p><i class="fa-solid fa-location-dot" ></i>
+                <a href="https://www.google.com/maps/place//@15.2754338,80.0794229,18.12z/data=!4m8!1m7!3m6!1s0x3a4b0a1c97d5cadd:0xc689abaed54455e9!2sPakala+Beach!8m2!3d15.274778!4d80.0856385!16s%2Fg%2F11cmt94mfg?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D">Ongole, prakasam, Andhra Pradesh</a></p> 
+                <p> <i class="fa-solid fa-paper-plane" ></i>
+                    <a href="mailto:ajayvatupalli7@gmail.com">ajayvatupalli7@gmail.com</a></p>
+                <p>  <i class="fa-brands fa-whatsapp" ></i>
+                    <a href="https://wa.me/9392355921">9392355921</a></p>
+
+
+                <div class="social-icons">
+                    <!-- <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a> -->
+
+                    <a href="mailto:ajayvatupalli7@gmail.com"><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/ajay-vatupalli-832915352?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bw7JbpXaXRAOlPyIySbKWQg%3D%3D"><i class="uil uil-linkedin-alt"></i></a>
+                    <a href="https://github.com/Ajay-110125"><i class="uil uil-github-alt"></i></a> 
+
+                    <!-- <a href="#"><img src="images/maill.png" width="30px" height="30px" ></a>
+                    <a href="#"><img src="images/linked-in.png" width="30px" height="30px" ></a>
+                    <a href="#"><img src="images/github.png" width="30px" height="30px" class="imgg"></a> -->
+                </div>
+                <a href="images/ajay-resume.pdf" download class="btn btn2">Download CV<i class="uil uil-file"></i></a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet" id="form" action=" /">
+                    <input type="text" id="Username" name="Name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" id="textarea" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit<i class="fa-solid fa-thumbs-up"></i></button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzG6uF01-XqCbmUSlnZc5Ku7b3715r0fMV_7m-6Lc_UR90dD81b-kLmD9HVidSJMwFA/exec' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    });
+  </script>
+
+ <script>
+    let scrollContainer = document.querySelector(".main-work-lists");
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("nextBtn");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+        scrollContainer.style.scrollBehavior = "auto";
+    });
+
+    nextBtn.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += 900;
+    });
+    backBtn.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft -= 900;
+    })
+  </script>  
+    
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
