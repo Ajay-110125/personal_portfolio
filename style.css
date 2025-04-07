@@ -542,7 +542,7 @@ nav .bars{
     }
 } */
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 500px){
     #header{
         background-image: url(images/phonebackground.jpg);
     }
@@ -652,7 +652,9 @@ nav .bars{
         font-size: 18px;
         color: #dbd8d8;
     }
-    
+    .contact-right .btn{
+        margin-top: 0px;
+    }
     
 
 }
