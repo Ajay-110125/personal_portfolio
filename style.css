@@ -551,7 +551,7 @@ nav .bars{
         color: #dbd8d8;
     }
     .header-text{
-        margin-top: 80%;
+        margin-top: 70%;
         font-size: 30px;
         padding-top: 0%;
 
@@ -566,10 +566,10 @@ nav .bars{
         line-height: 28px;
         color: #f3ecec;
     }
-    nav{
+    /* nav{
         position: fixed;
         overflow:hidden;
-    }
+    } */
     
     nav .bars{
         display: block;
@@ -636,7 +636,7 @@ nav .bars{
 
     .header-text .btn{
         display:block;
-        margin-top: 50px;
+        margin-top: 20px;
     }
     .header-text .typedtext{
         font-weight: bolder;
