@@ -542,7 +542,7 @@ nav .bars{
     }
 } */
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
     #header{
         background-image: url(images/phonebackground.jpg);
     }
@@ -551,12 +551,13 @@ nav .bars{
         color: #dbd8d8;
     }
     .header-text{
-        margin-top: 90%;
+        margin-top: 70%;
         font-size: 30px;
         padding-top: 0%;
 
         
     }
+    
     .header-text h1{
         font-size: 25px;
         
@@ -661,7 +662,7 @@ nav .bars{
 }
 #msg{
     color: #61b752;
-    margin-top: -20px;
+    margin-top: -50px;
     display: block;
 }
 
