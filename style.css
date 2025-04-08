@@ -533,14 +533,6 @@ nav .bars{
 
 
 
-/* -----------------css for small screens--------- */
-/* @media only screen and (max-width: 500px){
-    .header-text{
-        margin-top: 100%;
-        font-size: 20px;
-        padding-top: 20%; 
-    }
-} */
 
 @media only screen and (max-width: 600px){
     #header{
@@ -553,9 +545,7 @@ nav .bars{
     .header-text{
         margin-top: 70%;
         font-size: 30px;
-        padding-top: 0%;
-
-        
+        padding-top: 0%;   
     }
     
     .header-text h1{
@@ -665,4 +655,5 @@ nav .bars{
     margin-top: -50px;
     display: block;
 }
+
 
