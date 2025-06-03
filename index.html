@@ -14,8 +14,14 @@
 </head>
 <body>
 <div id="header">
+<!-- ---------------------video tag------------- -->
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="images/background_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+ <!-- -----------------video tag closed-------------------- -->
     <div class="container">
-        <nav>
+        <!-- <nav>
             <img src="images/logo.png"  class="logo">
             <ul id="sidemenu">
                 <li><a href="#header" class="act">Home</a></li>
@@ -26,7 +32,33 @@
                 <img src="images/cross.png" width="20px" height="20px" onclick="closemenu()" class="bars" id="bars">
             </ul>
             <img src="images/baars.png" width="30px" height="30px" onclick="openmenu()" class="bars">
-        </nav>
+        </nav> -->
+
+<!-- ------------------new nav tag------------- -->
+<nav>
+    <img src="images/logo.png"  class="logo">
+    <ul id="sidemenu" >
+        <li><a href="#header" class="act">Home</a></li>
+        <li><a href="#about" class="act">About</a></li>
+        <li><a href="#services" class="act">Services</a></li>
+        <li><a href="#portfolio" class="act">Projects</a></li>
+        <li><a href="#contact" class="act">Contact</a></li>
+    </ul>
+    
+  
+
+  <img src="images/baars.png" width="30px" height="30px" class="bars" id="openBarsMobile"  alt="Open menu button">
+
+    
+    <ul id="mobileDropdownMenu" >
+        <li><a href="#header" class="act">Home</a></li>
+        <li><a href="#about" class="act">About</a></li>
+        <li><a href="#services" class="act">Services</a></li>
+        <li><a href="#portfolio" class="act">Projects</a></li>
+        <li><a href="#contact" class="act">Contact</a></li>
+    </ul>
+</nav>
+<!-- ------------------new nav tag------------- -->
         <div class="header-text">
             <!-- <p>UI/UX Designer</p> -->
              <h1>Hello, I'm <span>Ajay</span></h1>
@@ -175,6 +207,7 @@
 
     <div class="button-wrap">
         <i class="fa-solid fa-arrow-right" id="backBtn"></i>
+        
         <div class="main-work-lists"> 
 
 
@@ -333,7 +366,9 @@
 
 </div>
 
-
+<!-- Scroll Back Button -->
+ 
+<a href="#"><img src="images/up-arrow.png" alt="Scroll Back" id="scrollBackBtn" /></a>
 
 <script>
 
@@ -353,7 +388,7 @@
 
 </script>
 
-<script>
+<!-- <script>
 
     var sidemeu = document.getElementById("sidemenu");
 
@@ -364,7 +399,80 @@
         sidemeu.style.right = "-200px";
     }
 
+</script> -->
+
+<!-- ----------------------------------------- ----------------------------------->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    var openBarsMobile = document.getElementById("openBarsMobile");
+    var closeBars = document.getElementById("closeBars");
+
+    function toggleDropdown(){
+        console.log("toggleDropdown called");
+        var dropdown = document.getElementById("mobileDropdownMenu");
+        if(dropdown.style.display === "block"){
+            dropdown.style.display = "none";
+            openBarsMobile.style.display = "block";
+            closeBars.style.display = "none";
+        } else {
+            dropdown.style.display = "block";
+            dropdown.style.zIndex = "2000"; // ensure dropdown is on top
+            openBarsMobile.style.display = "none";
+            closeBars.style.display = "block";
+        }
+    }
+
+    // Remove openmenu and closemenu functions as they manipulate sidemenu which conflicts with dropdown
+
+
+    // Attach event listeners unconditionally with toggleDropdown for openBarsMobile
+    document.addEventListener("DOMContentLoaded", function() {
+        var barsElements = document.querySelectorAll(".bars");
+        barsElements.forEach(function(bar) {
+            bar.addEventListener("click", function() {
+                console.log("Clicked bar with id:", bar.id);
+                if(bar.id === "openBarsMobile") {
+                    // Removed alert to prevent permission popup
+                    toggleDropdown();
+                } else if(bar.id === "closeBars") {
+                    // Removed alert to prevent permission popup
+                    toggleDropdown();
+                }
+            });
+        });
+    });
+
+    function handleResize() {
+        var openBarsMobile = document.getElementById("openBarsMobile");
+        if (window.innerWidth > 600) {
+            if (openBarsMobile) {
+                openBarsMobile.remove();
+            }
+        } else {
+            if (!document.getElementById("openBarsMobile")) {
+                var nav = document.querySelector("nav");
+                var img = document.createElement("img");
+                img.src = "images/baars.png";
+                img.width = 30;
+                img.height = 30;
+                img.className = "bars";
+                img.id = "openBarsMobile";
+                img.alt = "Open menu button";
+                img.style.cursor = "pointer";
+                img.addEventListener("click", toggleDropdown);
+                nav.appendChild(img);
+            }
+        }
+    }
+
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("DOMContentLoaded", function() {
+        handleResize();
+    });
 </script>
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxZKIhoRdBSYfJ1-Js32wPmNVu_hPI1GW6O-v6LRkslXgvXrGRIoBWGb4CVChlVjVQ/exec' // add your own app script link here
     const form = document.forms['submit-to-google-sheet']
